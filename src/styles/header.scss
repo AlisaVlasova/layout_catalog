@@ -30,28 +30,29 @@
         text-transform: uppercase;
         color: #000;
         line-height: 60px;
-      }
-      
-      .nav__link:hover {
-        color: $element-color;
+        transition: color 1s;
+
+        &:hover {
+          color: $element-color;
+        }
       }
       
       .is-active {
         color: $element-color;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 4px;
+          background-color: $element-color;
+          border-radius: 8px;
+        }
       }
       
-      .is-active::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 4px;
-        background-color: $element-color;
-        border-radius: 8px;
-      }
-
-      .nav__item:first-child {
+      &:first-child {
         margin-left: 0;
       }
     }

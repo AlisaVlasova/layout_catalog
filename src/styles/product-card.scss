@@ -1,3 +1,5 @@
+$outerBorderColor: #f3f3f3;
+
 .content {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
   height: 856px;
   margin: 50px auto 78px;
 
-  .content__row {
+  &__row {
     display: flex;
     justify-content: space-between;
     width: 944;
@@ -20,33 +22,39 @@
       height: 403px;
       padding: 30px 14px 14px;
       margin: 0;
-      border: 1px solid #f3f3f3;
+      border: 1px solid $outerBorderColor;
       border-radius: 5px;
 
-      .card__image {
+      &__image {
         background-image: url(/images/imac.jpeg);
         background-size: cover;
         background-position: center;
         height: 134px;
         width: 160px;
         margin: 0 5px 45px;
+        transition: transform 1s;
+
+        &:hover {
+          transform: scale(1.25);
+          border: 3px solid $outerBorderColor;
+        }
       }
       
-      .card__title {
+      &__title {
         font-weight: 500;
         font-size: 12px;
         line-height: 15px;
         margin: 0 0 5px;
       }
       
-      .card__code {
+      &__code {
         font-size: 11px;
         line-height: 13px;
         margin: 0;
         align-self: flex-start;
       }
       
-      .card__rate {
+      &__rate {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -81,7 +89,7 @@
         }
       }
       
-      .card__price {
+      &__price {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -100,7 +108,7 @@
         }
       }
       
-      .card__button {
+      &__button {
         font-weight: bold;
         font-size: 14px;
         line-height: 40px;
@@ -113,18 +121,18 @@
         width: 170px;
         height: 40px;
         border: 1px solid $element-color;
-      }
+        transition: background-color 1s, color 1s;
 
-      .card__button:hover {
-        background: $main-color;
-        color: $element-color;
+        &:hover {
+          background-color: $main-color;
+          color: $element-color;
+        }
       }
     }
   }
 
   @media (max-width: 1025px) {
-    .content {
+
       padding: 0 16px;
-    }
   }
 }
