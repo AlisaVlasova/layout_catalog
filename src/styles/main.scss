@@ -5,12 +5,16 @@ $main-font: "Roboto", sans-serif;
 @import "header";
 @import "product-card";
 
+html {
+  font-family: $main-font;
+  font-size: 12px;
+  line-height: 60px;
+}
+
 body {
   margin: 0;
-  font-family: $main-font;
 }
 
 * {
   box-sizing: border-box;
 }
-
