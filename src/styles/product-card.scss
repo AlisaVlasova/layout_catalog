@@ -9,10 +9,6 @@ $contentHeight: $cardHeight * 2 + 50px;
   line-height: 13px;
 }
 
-.main {
-  margin: 50px auto 78px;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -27,131 +23,110 @@ $contentHeight: $cardHeight * 2 + 50px;
 
     width: $contentWidth;
     height: $cardHeight;
+}
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-      width: $cardWidth;
-      height: $cardHeight;
+  width: $cardWidth;
+  height: $cardHeight;
 
-      padding: 30px 14px 14px;
-      border: 1px solid $outerBorderColor;
-      border-radius: 5px;
+  padding: 30px 14px 14px;
+  border: 1px solid $outerBorderColor;
+  border-radius: 5px;
 
-      &__image {
-        background-image: url(/images/imac.jpeg);
-        background-size: cover;
-        background-position: center;
+  &__image {
+    background-image: url(/images/imac.jpeg);
+    background-size: cover;
+    background-position: center;
 
-        height: 134px;
-        width: 160px;
+    height: 134px;
+    width: 160px;
 
-        margin: 0 5px 45px;
+    margin: 0 5px 45px;
 
-        transition: transform 1s;
+    transition: transform 1s;
 
-        &:hover {
-          transform: scale(1.25);
-          border: 3px solid $outerBorderColor;
-        }
-      }
-      
-      &__title {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 15px;
-        margin: 0 0 5px;
-      }
-      
-      &__code {
-        @include textFont();
-        align-self: flex-start;
-      }
-      
-      &__rate {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        width: 100%;
-        height: 15px;
-
-        margin: 15px 0 20px;
-
-        .stars {
-          display: flex;
-        }
-        
-        .stars__item {
-          background-image: url(/images/star.svg);
-          background-repeat: no-repeat;
-          background-position: center;
-
-          height: 15px;
-          width: 15px;
-
-          margin-right: 4px;
-        }
-
-        @for $i from 1 to 5 {
-          .stars--#{$i} :nth-child(-n+#{$i}) {
-            background-image: url(/images/star-active.svg);
-
-          }
-        }
-        
-        .card__feedback {
-          @include textFont();
-        }
-      }
-      
-      &__price {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-
-        width: 100%;
-  
-        margin: 0 0 20px;
-
-        .card__cost {
-          @include textFont();
-        }
-        
-        .card__sum {
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 19px;
-        }
-      }
-      
-      &__button {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 40px;
-
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-
-        color: $main-color;
-        background: $element-color;
-
-        width: 170px;
-        height: 40px;
-
-        border-radius: 5px;
-        border: 1px solid $element-color;
-
-        transition: background-color 1s, color 1s;
-
-        &:hover {
-          background-color: $main-color;
-          color: $element-color;
-        }
-      }
+    &:hover {
+      box-sizing: content-box;
+      transform: scale(1.25);
+      border: 3px solid $outerBorderColor;
     }
   }
+  
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 0 5px;
+  }
+  
+  &__code {
+    @include textFont();
+    align-self: flex-start;
+  }
+  
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 15px;
+
+    margin: 15px 0 20px;
+    
+    .card__feedback {
+      @include textFont();
+    }
+  }
+  
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 100%;
+
+    margin: 0 0 20px;
+
+    .card__cost {
+      @include textFont();
+    }
+    
+    .card__sum {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  
+  &__button {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: $main-color;
+    background: $element-color;
+
+    width: 170px;
+    height: 40px;
+
+    border-radius: 5px;
+    border: 1px solid $element-color;
+
+    transition: background-color 1s, color 1s;
+
+    &:hover {
+      background-color: $main-color;
+      color: $element-color;
+    }
+  }
+}
 }

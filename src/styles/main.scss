@@ -4,6 +4,7 @@ $main-font: "Roboto", sans-serif;
 
 @import "header";
 @import "product-card";
+@import "stars";
 
 html {
   font-family: $main-font;
@@ -17,4 +18,8 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.main {
+  margin: 50px auto 78px;
 }
