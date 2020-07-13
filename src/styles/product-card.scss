@@ -1,8 +1,8 @@
 $outerBorderColor: #f3f3f3;
 $cardWidth: 200px;
 $cardHeight: 403px;
-$contentWidth: $cardWidth*4+48*3;
-$contentHeight: $cardHeight*2+50px;
+$contentWidth: $cardWidth * 4 + 48px * 3;
+$contentHeight: $cardHeight * 2 + 50px;
 
 @mixin textFont {
   font-size: 11px;
@@ -24,7 +24,7 @@ $contentHeight: $cardHeight*2+50px;
   &__row {
     display: flex;
     justify-content: space-between;
-    
+
     width: $contentWidth;
     height: $cardHeight;
 
@@ -153,9 +153,5 @@ $contentHeight: $cardHeight*2+50px;
         }
       }
     }
-  }
-
-  @media (max-width: 1025px) {
-    padding: 0 16px;
   }
 }
