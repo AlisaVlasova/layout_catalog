@@ -13,11 +13,11 @@
   }
   .nav {
     $blockName: &;
-    margin: 0;
 
     &__menu {
       display: flex;
       padding: 0;
+      margin: 0;
   
       .nav__item {
         list-style: none;
@@ -63,6 +63,4 @@
       }
     }
   }
-  
-  }
-  
+}
