@@ -1,15 +1,33 @@
-$main-color: #fff;
-$element-color: #00acdc;
-$main-font: "Roboto", sans-serif;
-
+@import "_variables";
+@import "_mixin";
+@import "_reset";
 @import "header";
 @import "product-card";
+@import "stars";
 
-body {
-  margin: 0;
+html {
   font-family: $main-font;
+  font-size: 12px;
+  line-height: 60px;
 }
 
-* {
-  box-sizing: border-box;
+.main {
+  margin: 50px auto 78px;
+  width: $contentWidth;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: $contentWidth;
+  height: $contentHeight;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    height: $cardHeight;
+  }
 }
