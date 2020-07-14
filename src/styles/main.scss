@@ -1,7 +1,6 @@
-$main-color: #fff;
-$element-color: #00acdc;
-$main-font: "Roboto", sans-serif;
-
+@import "_variables";
+@import "_mixin";
+@import "_reset";
 @import "header";
 @import "product-card";
 @import "stars";
@@ -12,10 +11,6 @@ html {
   line-height: 60px;
 }
 
-body {
-  margin: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -23,4 +18,20 @@ body {
 .main {
   margin: 50px auto 78px;
   width: $contentWidth;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: $contentWidth;
+  height: $contentHeight;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    height: $cardHeight;
+  }
 }
