@@ -17,17 +17,11 @@ html {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+
   justify-content: space-between;
+  align-content: space-between;
 
-  width: $contentWidth;
   height: $contentHeight;
-
-  &__row {
-    display: flex;
-    justify-content: space-between;
-
-    height: $cardHeight;
-  }
 }
