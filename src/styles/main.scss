@@ -13,21 +13,13 @@ html {
 
 .main {
   margin: 50px auto 78px;
-  width: $contentWidth;
+  max-width: $contentWidth;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: $contentWidth;
-  height: $contentHeight;
-
-  &__row {
-    display: flex;
-    justify-content: space-between;
-
-    height: $cardHeight;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  row-gap: $rowGap;
+  column-gap: $columnGap;
 }
