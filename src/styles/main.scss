@@ -13,15 +13,13 @@ html {
 
 .main {
   margin: 50px auto 78px;
-  width: $contentWidth;
+  max-width: $contentWidth;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-
-  justify-content: space-between;
-  align-content: space-between;
-
-  height: $contentHeight;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  row-gap: $rowGap;
+  column-gap: $columnGap;
 }
